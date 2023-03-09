@@ -12,7 +12,7 @@
     </style>
   </head>
   <body>
-    <nav class="navbar">
+    <nav class="navbar" id="Home">
       <div>
       <div class="icon">
         <img style="height:100%; width:100%; object-fit:contain" src="https://cdn.discordapp.com/attachments/281354626819686400/1083351472667889664/Revou-alasan.png" alt="Contact Person">
@@ -20,9 +20,9 @@
     </div>
 
       <nav class="Button-Container">
-        <a href="#" class="home">Home</a>
-        <a href="#" class="Our-Packages">Our Packages</a>
-        <a href="#" class="Call-us">Call Us</a>
+        <a href="#Home" class="home">Home</a>
+        <a href="#Our-Packages" class="Our-Packages">Our Packages</a>
+        <a href="#Footer" class="Call-us">Call Us</a>
       </nav>
     </nav>
     <div class="banner">
@@ -35,37 +35,117 @@
      
      
         <div class="contact-info">
-        <img src="https://media.tenor.com/Uxeo34AJba0AAAAC/obama-obamium.gif" alt="Contact Person">
+        
+          <div class="slider-container">
+            <img src="https://cdn.discordapp.com/attachments/281354626819686400/1083365776049836072/3badc6c2-ea6c-4bc8-a939-b97c98bfe283.png" alt="Image 1">
+           <img src="https://cdn.discordapp.com/attachments/281354626819686400/1083365838511415306/6282297dc8c19-marlion-park-singapore_665_374.png" alt="Image 2">
+           <img src="https://cdn.discordapp.com/attachments/281354626819686400/1083365922112295012/Z.png" alt="Image 3">
+           <img src="https://cdn.discordapp.com/attachments/281354626819686400/1083366914459435089/US_Bandung_ID_Header.png" alt="Image 4">
+           <img src="https://cdn.discordapp.com/attachments/281354626819686400/1083366975041970237/Anda-di-Surabaya-Inilah-Pentingnya-Menggunakan-Konsultan-Pajak-Surabaya-1024x681.png" alt="Image 5">
+           <img src="https://cdn.discordapp.com/attachments/281354626819686400/1083367031941894175/2Q.png" alt="Image 6">
+         </div>
+
+         
+         
+         <script>
+          // script for imageslide
+          const sliderContainer = document.querySelector(".slider-container");
+          const sliderImages = document.querySelectorAll(".slider-container img");
+      
+          // Set initial slide index
+          let slideIndex = 0;
+      
+          // Function to display current slide
+          function showSlide() {
+            // Hide all slides
+            sliderImages.forEach(img => img.style.display = "none");
+      
+            // Show current slide
+            sliderImages[slideIndex].style.display = "block";
+      
+            // Increment slide index or reset to 0
+            slideIndex = (slideIndex + 1) % sliderImages.length;
+      
+            // Repeat function after 3 seconds
+            setTimeout(showSlide, 3000);
+          }
+      
+          // Call function to start slider
+          showSlide();
+        </script>
+       
+       
+       
+      
+       
         <h3 style="text-align: left; padding-left:10%"><i> "Liburan jadi menyenangkan bersama Travel Agentku"</i></h3>
         <div class="contact-box" style="margin:30px; display:flex; flex:1;align-content:center;justify-content:left">
             <div class="icon">
                  <img src="https://media.tenor.com/Uxeo34AJba0AAAAC/obama-obamium.gif" alt="Contact Person">
             </div>
-            <div class="Contact-detail"> 
-                 <h3>Florence Hughes</h3>
-                <p>ibu rumah tangga, 28 </p>
+              <div class="Contact-detail"> 
+                 <h3>Bang Obama</h3>
+                <p>Mantan Presiden, 50 </p>
              </div>
         </div>
       </div>
     
+
+
+
+
+
+
+
+
+
+
+      <script>
+        function validateForm() {
+          var name = document.forms["myForm"]["name"].value;
+          var email = document.forms["myForm"]["email"].value;
+        
+    
+          if (name == "") {
+            alert("Name must be filled out");
+            return false;
+          }
+    
+          if (email == "") {
+            alert("Email must be filled out");
+            return false;
+          }
+    
+       else {
+        alert("your inquiries has been sent")
+       }
+    
+          return true;
+        }
+      </script>
       <div class="contact-form">
         <h2>Contact Us</h2>
         <p>Sales akan menghubungi anda 1x24 jam setelah data kami terima </p>
-        <form action="#">
+        <form name="myForm" onsubmit="return validateForm()" method="post">
           <label for="name">Your Name:</label>
-          <input type="text" id="name" name="name" placeholder="Your name..">
-          <label for="email">Email Address:</label>
-          <input type="email" id="email" name="email" placeholder="email@address.com">
+          <input type="text" id="name" name="name" placeholder="Your name.."><br>
+      
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="email@address.com"><br><br>
+        
           <label for="message">What are you interested in?:</label>
           <select id="country" name="country">
-            <option value="australia">Australia</option>
-            <option value="canada">Canada</option>
-            <option value="usa">USA</option>
-          </select>
-
-        </form>
-        <br>
-        <input type="Submit" value="Send" >
+              <option value="Bali">Bali</option>
+              <option value="Japan">Japan</option>
+              <option value="Singapore">Singapore</option>
+              <option value="Bandung">Bandung</option>
+              <option value="Surabaya">Surabaya</option>
+              <option value="Korea">Korea</option>
+            </select>
+          <input type="submit" value="send">
+    </form>
+       
+       
       </div>
       <div class="more-info">
         <h3 style="padding-left:50px">Ini adalah beberapa alasan kenapa kami adalah travel agent yang tepat untuk anda  </h3>
@@ -91,7 +171,7 @@
 </div>
 
 <div>
-    <div class="banner">
+    <div class="banner" id="Our-Packages">
       <h1>Our Packages</h1>
     </div>
     <div class="flex-container2">
@@ -153,16 +233,34 @@
             <h1>Korea</h1>
             <p>Travel dan wista di Korea, kunjungi cagar budaya dan kuliner yang menarik</p>
           </div>
-        </div>
-
-    
-        
+        </div>    
     </div>
 
 
 
 </div>
 
+<div class="banner">
+  <div>
+<h1>Mari travel bersama degan RevoU Travel</h1>
+<p>dijamin dapat memori yang tidak dapat dilupakan</p>
+<input type="Submit" value="Contact Us" >
+  </div>
+  
+</div>
 
   </body>
+  <br>
+  <footer id="Footer">
+    <div class="footer-content">
+      <div class="footer-column" style="text-align: center;">
+        <h3>About Us</h3>
+        <p>RevoU Travel.</p>
+      </div>
+    
+    <div class="footer-bottom" style="text-align: center;">
+      <p>&copy; Term of Service.  Privacy Policy.</p>
+    </div>
+  </footer>
+  
 </html>
